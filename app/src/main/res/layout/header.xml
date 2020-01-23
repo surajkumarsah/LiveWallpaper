@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="160dp"
+    android:background="@color/colorPrimary"
+    >
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:src="@drawable/ic_launcher_foreground"
+        android:layout_margin="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Live Wallpaper"
+        android:textColor="@color/browser_actions_text_color"
+        android:fontFamily="cursive"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_marginLeft="5dp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Surajkumarsah165@gmail.com"
+        android:fontFamily="cursive"
+        android:textColor="#fff"
+        android:textSize="15sp"
+        android:layout_marginLeft="5dp"
+        />
+
+
+</LinearLayout>
