@@ -12,10 +12,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true"
-        tools:ignore="GoogleAppIndexingWarning"
-        android:theme="@style/AppTheme">
-        <activity android:name=".ViewWallpaperActivity"></activity>
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".UpdateImage_Activity"></activity>
+        <activity android:name=".Login_Activity" />
+        <activity android:name=".ViewWallpaperActivity" />
         <activity android:name=".ListWallpaperActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -27,9 +29,7 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-9028512770259391~2388554457"/>
-        <!--ca-app-pub-9028512770259391~2388554457-->
-
+            android:value="ca-app-pub-9028512770259391~2388554457" />
     </application>
 
 </manifest>

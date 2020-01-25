@@ -22,13 +22,14 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.NetworkPolicy;
 import com.squareup.picasso.Picasso;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private RecyclerView recyclerView;
     DatabaseReference CategoryBackgroundReference;
@@ -48,8 +49,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-        MobileAds.initialize(this,
-                "ca-app-pub-9028512770259391~2388554457");
+        MobileAds.initialize(this, "ca-app-pub-9028512770259391~2388554457");
 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
@@ -61,6 +61,9 @@ public class MainActivity extends AppCompatActivity {
         mDrawerLayout.addDrawerListener(mToggle);
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        NavigationView navigationView = findViewById(R.id.navBar);
+        navigationView.setNavigationItemSelectedListener(this);
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
@@ -157,5 +160,62 @@ public class MainActivity extends AppCompatActivity {
             adapter.stopListening();
         }
         super.onStop();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+
+        switch (menuItem.getItemId())
+        {
+            case R.id.login :
+                Intent intent = new Intent(MainActivity.this,Login_Activity.class);
+                startActivity(intent);
+
+                break;
+
+            case R.id.dashboard :
+                Intent intent1 = new Intent(MainActivity.this,MainActivity.class);
+                startActivity(intent1);
+
+                break;
+
+            case R.id.search :
+                Intent intent2 = new Intent(MainActivity.this,Login_Activity.class);
+                startActivity(intent2);
+
+                break;
+
+            case R.id.events :
+                Intent intent3 = new Intent(MainActivity.this,Login_Activity.class);
+                startActivity(intent3);
+
+                break;
+
+            case R.id.setting :
+                Intent intent4 = new Intent(MainActivity.this,Login_Activity.class);
+                startActivity(intent4);
+
+                break;
+
+            case R.id.activities :
+                Intent intent5 = new Intent(MainActivity.this,Login_Activity.class);
+                startActivity(intent5);
+                break;
+
+
+            case R.id.nav_share :
+                Intent intent6 = new Intent(MainActivity.this,Login_Activity.class);
+                startActivity(intent6);
+                break;
+
+
+            case R.id.nav_send :
+                Intent intent7 = new Intent(MainActivity.this,Login_Activity.class);
+                startActivity(intent7);
+                break;
+
+        }
+
+        return true;
     }
 }
