@@ -5,5 +5,8 @@
     <color name="colorAccent">#D81B60</color>
     <color name="darkgray">#171616</color>
     <color name="white">#E8E4E5</color>
+    <color name="middilecolor">#6658AC</color>
+    <color name="endcolor">#487ED1</color>
+    <color name="startcolor">#7097BE</color>
 
 </resources>

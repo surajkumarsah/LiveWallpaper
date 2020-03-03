@@ -18,6 +18,9 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.livewallpaper.model.GalleryView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.tasks.Continuation;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -44,12 +47,19 @@ public class UpdateImage_Activity extends AppCompatActivity {
     private Button AddWallpaper, AddCategory;
     private EditText cid, imageLink, name, wallpaperId, wallpaperCid,imgLinkWallpaper;
     String c_id, image_Link, Name, wallpaper_Id, wallpaper_Cid,img_LinkWallpaper;
-
+    AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_update_image_);
+
+
+        MobileAds.initialize(this, "ca-app-pub-9028512770259391~2388554457");
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         AddWallpaper = (Button) findViewById(R.id.addWallpaper);
         AddCategory = (Button) findViewById(R.id.addCategory);

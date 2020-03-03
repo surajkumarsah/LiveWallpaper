@@ -12,7 +12,7 @@
         android:orientation="vertical">
 
     <LinearLayout
-
+        android:background="@drawable/background"
         android:layout_width="match_parent"
         android:layout_height="350dp"
         android:layout_marginLeft="15dp"
@@ -24,6 +24,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@drawable/background"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10dp"
             android:padding="10dp"
@@ -40,6 +41,8 @@
         android:layout_marginRight="20dp"
         android:hint="CategoryId"
         android:paddingLeft="10dp"
+        android:textColorHint="@color/white"
+        android:background="@drawable/gradient"
         />
 
 
@@ -51,6 +54,8 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="20dp"
         android:hint="imageLink"
+        android:background="@drawable/gradient"
+        android:textColorHint="@color/white"
         android:paddingLeft="10dp"
         />
 
@@ -62,6 +67,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/gradient"
+            android:textColorHint="@color/white"
             android:hint="Name"
             android:paddingLeft="10dp"
             />
@@ -74,6 +81,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="30dp"
         android:text="Add Category"
+        android:background="@drawable/gradient"
+        android:padding="10dp"
         android:textColor="#000000"
         />
     </LinearLayout>
@@ -86,6 +95,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginRight="15dp"
+        android:background="@drawable/background"
+        android:layout_marginBottom="100dp"
         android:orientation="vertical">
 
         <ImageView
@@ -120,6 +131,8 @@
             android:layout_marginTop="30dp"
             android:layout_marginRight="20dp"
             android:hint="wallpaperId"
+            android:background="@drawable/gradient"
+            android:textColorHint="@color/white"
             android:paddingLeft="10dp"
             />
 
@@ -131,6 +144,8 @@
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="20dp"
+            android:background="@drawable/gradient"
+            android:textColorHint="@color/white"
             android:hint="CId"
             android:paddingLeft="10dp"
             />
@@ -139,6 +154,8 @@
         <EditText
             android:id="@+id/imgLinkwallpaper"
             android:layout_width="match_parent"
+            android:background="@drawable/gradient"
+            android:textColorHint="@color/white"
             android:layout_height="50dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="10dp"
@@ -155,10 +172,34 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="30dp"
             android:text="Add Wallpaper"
+            android:background="@drawable/gradient"
+            android:padding="10dp"
             android:textColor="#000000"
             />
     </LinearLayout>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+
+            <com.google.android.gms.ads.AdView
+                xmlns:ads="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                ads:adSize="BANNER"
+                ads:adUnitId="ca-app-pub-9028512770259391/3676465835">
+            </com.google.android.gms.ads.AdView>
+
+        </LinearLayout>
+
     </LinearLayout>
+
+
+
 
 </ScrollView>
